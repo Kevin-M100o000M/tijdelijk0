@@ -43,7 +43,7 @@ int vijandbreedte2 = 40;
 //class vijand;
 //vijand[] vijanden = new Vijand[2];
 //{
-//vijanden[0]= 90;
+//vijanden[0]= 90;aaaaaa
 //vijanden[1]= 150;
 ////vijanden[2]= 20;
 //}
@@ -51,18 +51,18 @@ int vijandbreedte2 = 40;
 float Ranx = x;
 float Rany = 45;
 
-
+vijand e;
 
 void setup(){
   size(1200,600);
-
+  e = new vijand();
   //frameRate(60);
 
 }
 
 void draw(){
     background(200,33,66);
-
+ e.bee();
   //  if(frameCount % 60 == 0){
   //   //Ranx = random(1200);
   //  Rany = random(600);
