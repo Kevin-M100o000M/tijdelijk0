@@ -51,23 +51,28 @@ int vijandbreedte2 = 40;
 float Ranx = x;
 float Rany = 45;
 
-vijand e;
+vijand v0;
+vijand v1;
 
 void setup(){
   size(1200,600);
-  e = new vijand();
+  v0 = new vijand();
+  v1 = new vijand();
   //frameRate(60);
 
 }
 
 void draw(){
     background(200,33,66);
- e.bee();
-  //  if(frameCount % 60 == 0){
-  //   //Ranx = random(1200);
-  //  Rany = random(600);
-  //Ranx = x-random(-60,60);
-  //}
+  v0.display();
+  v0.vijand();
+  v0.desend();
+  v0.top();
+  v1.display();
+  v1.vijand();
+  v1.desend();
+  v1.top();
+
  println(vijandbreedte0); 
  //println(vijandhoogte);
  println(x);
