@@ -56,6 +56,11 @@ vijand v1;
 
 void setup(){
   size(1200,600);
+   camera();
+  camera(170.0, 35.0, 120.0, 50.0, 50.0, 0.0, 
+       0.0, 1.0, 0.0);
+  rotateX(30);
+  rotateY(40);
   v0 = new vijand();
   v1 = new vijand();
   //frameRate(60);
@@ -63,7 +68,7 @@ void setup(){
 }
 
 void draw(){
-    background(200,33,66);
+  background(200,33,66);
   v0.display();
   v0.vijand();
   v0.desend();
