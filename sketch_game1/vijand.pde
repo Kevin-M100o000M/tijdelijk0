@@ -10,13 +10,14 @@ class vijand{
  void desend(){
     move = move + 2;
     y = 0 + move;
+      if(y > height){
+       y = height;
+   }
  }
   void display(){
  ellipse(x,y,dia,dia);
  }
  void top(){
-   if(y > height){
-       y = height;
-   }
+ 
  }
 }
