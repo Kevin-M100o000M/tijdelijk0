@@ -64,18 +64,17 @@ void setup(){
   v0 = new vijand();
   v1 = new vijand();
   //frameRate(60);
-
+ v0.x = 50;
+ v1.x = 200;
 }
 
 void draw(){
   background(200,33,66);
   v0.display();
-  v0.vijand();
-  v0.desend();
+  v0.movement();
   v0.top();
   v1.display();
-  v1.vijand();
-  v1.desend();
+  v1.movement();
   v1.top();
 
  println(vijandbreedte0); 
