@@ -2,7 +2,8 @@ class vijand{
  public int  x;
  int  y;
  int move;
- float dia = 64;
+ public int w = 64;
+ public int h = 64;
  void vijand(){
    x = width/2;
    //y = height-20;
@@ -19,6 +20,6 @@ class vijand{
  }
  
   void display(){
- ellipse(x,y,dia,dia);
+ ellipse(x,y,w,h);
  }
 }

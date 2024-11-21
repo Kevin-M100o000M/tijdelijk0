@@ -52,7 +52,8 @@ float Ranx = x;
 float Rany = 45;
 
 player p;
-player b0;
+
+buleets b0;
 
 vijand v0;
 vijand v1;
@@ -60,7 +61,7 @@ vijand v1;
 void setup(){
   size(1200,600);
   p = new player();
-  b0 = new player();
+  b0 = new buleets();
   v0 = new vijand();
   v1 = new vijand();
   //frameRate(60);
@@ -73,14 +74,11 @@ void draw(){
   background(200,33,66);
   
   p.player();
-  
-       if(key == 'w'){
-    b0.buleets();
-       
-  }    if(keyCode == UP){
-    x= x+-MVvalue;
-  }
-     b0.buleets();
+  p.playercollison();
+  //p.p();
+  //p.r();
+  //p.d();
+   //b0.buleets();
 
   v0.display();
   v0.movement();
@@ -89,13 +87,16 @@ void draw(){
   v1.movement();
 
 
- //println(vijandbreedte0); 
- //println(vijandhoogte);
- //println(x);ra
- //println(frameRate);
-  fill(134,99,179);
-  //stroke(10,255,3);
-rect(x,y,spelerSize,spelerSize);
+       if(key == 'w'+ 'd'){
+   b0.buleets();
+       
+  }    if(keyCode == UP){
+    x= x+-MVvalue;
+  }
+    //if (qpressed) background(255, 0, 0);
+    //  if (rp) background(0, 0, 232);
+    // if (qpressed && rp) background(255, 4,222);
+
 rect(Ranx,Rany,99,99);
   //fill(22,0,174);
   fill(104,139,139);
@@ -120,17 +121,7 @@ else if (vijandY0 == 150 || vijandY0 <= 150){
 //  x = 99;
 //}
 
-if (x + spelerSize > vijandX0 && x < vijandX0 + vijandbreedte0 && y + spelerSize > vijandY0 && y < vijandY0 + vijandhoogte0 || x + spelerSize > vijandX1 && x < vijandX1 + vijandbreedte1 && y + spelerSize > vijandY0 && y < vijandY0 + vijandhoogte1) {
-      x = 99;
-      y = 300;
-  }
-if (x + spelerSize > vijandX2 && x < vijandX2 + vijandbreedte2 && y + spelerSize > vijandY2 && y < vijandY2 + vijandhoogte2) {
-   //void setup(){
-    //size(900);
-   //}
-   y = 180;
-   vijandBlok = vijandBlok+2;
-  }
+
 
 
 
@@ -143,12 +134,15 @@ if (x + spelerSize > vijandX2 && x < vijandX2 + vijandbreedte2 && y + spelerSize
 
 //Ranx = Ranx + random(-2,2);
 //Rany = Rany + random(-2,2);
+
+
 }
 
 
 
 void keyPressed(){
-  
+   if (key == 'q' && qpressed == false) qpressed = true; 
+   if (key == 'r' && rp == false) rp = true; 
    p.playermove();
    if(key == 'a'){
     x= x+-MVvalue;
@@ -160,13 +154,6 @@ void keyPressed(){
     x= x+MVvalue;
   }    if(keyCode == RIGHT){
     x= x+MVvalue;
-  }
-  
-     if(key == 'w'){
-    b0.buleets();
-       
-  }    if(keyCode == UP){
-    x= x+-MVvalue;
   }
 
    if(key == 's'){
@@ -182,4 +169,13 @@ void keyPressed(){
   //   ya = -4;
   //}
   
+}
+boolean qpressed = false;
+boolean rp = false;
+void keyReleased(){
+  if(key == 'q'){
+    qpressed = false;
+  }
+   if (char(key) == 'r') rp = false;
+
 }

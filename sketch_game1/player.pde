@@ -37,7 +37,7 @@ void playermove(){
 } //<>//
 
 void playercollison(){
-    if (x + spelerSize > vijandX0 && x < vijandX0 + vijandbreedte0 && y + spelerSize > vijandY0 && y < vijandY0 + vijandhoogte0 || x + spelerSize > vijandX1 && x < vijandX1 + vijandbreedte1 && y + spelerSize > vijandY0 && y < vijandY0 + vijandhoogte1) { //<>//
+    if (x + spelerSize > v0.x && x < v0.x + v0.w && y + spelerSize > v0.y && y < v0.y + v0.h || x + spelerSize > vijandX1 && x < vijandX1 + vijandbreedte1 && y + spelerSize > vijandY0 && y < vijandY0 + vijandhoogte1) { //<>//
       x = 99;
       y = 300;
   }
@@ -47,14 +47,13 @@ if (x + spelerSize > vijandX2 && x < vijandX2 + vijandbreedte2 && y + spelerSize
    //}
    y = 180;
    vijandBlok = vijandBlok+2;
-  }  
+  }
 }
 
-void buleets(){
-   rect(x,y,50,50);
-   y = y + 1;
-  
-}
+
+
+
+
 
 
 }
