@@ -1,4 +1,4 @@
-int[] numbers = new int[3];
+  int[] numbers = new int[3];
 {
 numbers[0]= 90;
 numbers[1]= 150;
@@ -51,35 +51,47 @@ int vijandbreedte2 = 40;
 float Ranx = x;
 float Rany = 45;
 
+player p;
+player b0;
+
 vijand v0;
 vijand v1;
 
 void setup(){
   size(1200,600);
-   camera();
-  camera(170.0, 35.0, 120.0, 50.0, 50.0, 0.0, 
-       0.0, 1.0, 0.0);
-  rotateX(30);
-  rotateY(40);
+  p = new player();
+  b0 = new player();
   v0 = new vijand();
   v1 = new vijand();
   //frameRate(60);
  v0.x = 50;
  v1.x = 200;
+  
 }
-
+float n = mouseX;
 void draw(){
   background(200,33,66);
+  
+  p.player();
+  
+       if(key == 'w'){
+    b0.buleets();
+       
+  }    if(keyCode == UP){
+    x= x+-MVvalue;
+  }
+     b0.buleets();
+
   v0.display();
   v0.movement();
-  v0.top();
+
   v1.display();
   v1.movement();
-  v1.top();
 
- println(vijandbreedte0); 
+
+ //println(vijandbreedte0); 
  //println(vijandhoogte);
- println(x);
+ //println(x);ra
  //println(frameRate);
   fill(134,99,179);
   //stroke(10,255,3);
@@ -136,18 +148,8 @@ if (x + spelerSize > vijandX2 && x < vijandX2 + vijandbreedte2 && y + spelerSize
 
 
 void keyPressed(){
-  //if(key == 'w'){
-  //  y= y+-MVvalue;
-  //}if(keyCode == UP){
-  //  y= y+-MVvalue;
-  //}
   
-  //   if(key == 's'){
-  //  y= y+MVvalue;
-  //} if(keyCode == DOWN){
-  //  y= y+MVvalue;
-  //}
-  
+   p.playermove();
    if(key == 'a'){
     x= x+-MVvalue;
   }    if(keyCode == LEFT){
@@ -157,6 +159,19 @@ void keyPressed(){
    if(key == 'd'){
     x= x+MVvalue;
   }    if(keyCode == RIGHT){
+    x= x+MVvalue;
+  }
+  
+     if(key == 'w'){
+    b0.buleets();
+       
+  }    if(keyCode == UP){
+    x= x+-MVvalue;
+  }
+
+   if(key == 's'){
+    x= x+MVvalue;
+  }    if(keyCode == DOWN){
     x= x+MVvalue;
   }
   

@@ -21,7 +21,4 @@ class vijand{
   void display(){
  ellipse(x,y,dia,dia);
  }
- void top(){
- 
- }
 }
