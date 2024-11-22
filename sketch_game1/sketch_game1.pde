@@ -17,7 +17,7 @@ int spelerSize = 30;
 int MVvalue = 10;
 
 float xa = 99;
-int ya = 100;
+int ya = 100;   
 
 int vijandBlok = 2; 
 
@@ -75,6 +75,7 @@ void draw(){
   
   p.player();
   p.playercollison();
+  p.playershoot();
   //p.p();
   //p.r();
   //p.d();
@@ -87,12 +88,7 @@ void draw(){
   v1.movement();
 
 
-       if(key == 'w'+ 'd'){
-   b0.buleets();
-       
-  }    if(keyCode == UP){
-    x= x+-MVvalue;
-  }
+
     //if (qpressed) background(255, 0, 0);
     //  if (rp) background(0, 0, 232);
     // if (qpressed && rp) background(255, 4,222);
@@ -155,6 +151,7 @@ void keyPressed(){
   }    if(keyCode == RIGHT){
     x= x+MVvalue;
   }
+   
 
    if(key == 's'){
     x= x+MVvalue;

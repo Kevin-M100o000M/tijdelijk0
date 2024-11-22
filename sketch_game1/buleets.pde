@@ -1,8 +1,11 @@
 class buleets{
-int x;
+int x = p.x;
 int y = p.y;
   void buleets(){
-   rect(p.x,y,50,50);
+   
+   rect(x,y,50,50);
    y = y - 1;   
-}
+   
+
+  }
 }
