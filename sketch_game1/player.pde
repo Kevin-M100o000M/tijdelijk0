@@ -1,4 +1,4 @@
-class player { //<>// //<>// //<>//
+ class player { //<>// //<>// //<>//
   public int x = 99;
   int y = 300;
   int spelerSize = 30;
@@ -40,7 +40,10 @@ class player { //<>// //<>// //<>//
 
     if (key == 'w') {
    {
-        b0.buleets();
+        //b1.buleets();
+         //funct.add(new test());
+     test part = funct.get(0);
+     part.funct();
       }
     }
   }
