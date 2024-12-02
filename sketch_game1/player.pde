@@ -1,5 +1,5 @@
  class player { //<>// //<>// //<>//
-  public int x = 99;
+  public int x  = 99;
   int y = 300;
   int spelerSize = 30;
   int move;

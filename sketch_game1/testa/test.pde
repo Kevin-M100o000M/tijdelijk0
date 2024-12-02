@@ -1,14 +1,33 @@
 class test{
-  float x = random(150,600);
-  int y = 30;
-  //float life = 255;
+  float x = 200;
+  public int y = 30;
+  public float life = 255;
+
+  
   void funct(){
-   fill(244,44,44);  
+   stroke(0,life);
+   strokeWeight(2);
+   fill(127,life);  
    rect(x,y,50,50);
-   y = y + 1;  
-   //life = -2;
+   y = y + 3;  
+   
+   
+
+   }
+   
+
+  void update(){
+         life -= 1.5;
   }
+      boolean dead(){
+        if(life <= 0){
+    return true;
+   }else{
+   return false;
+   }
+  
 }  
+  }
 
 // funct.add(new test());
   // test part = funct.get(0);
