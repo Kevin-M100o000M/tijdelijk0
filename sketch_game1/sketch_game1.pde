@@ -1,3 +1,4 @@
+ArrayList<bullet> display  = new ArrayList<bullet>();
 int[] numbers = new int[3];
 {
   numbers[0]= 90;
@@ -53,8 +54,10 @@ float Ranx = x;
 float Rany = 45;
 
 player p;
+core c0;
 //buleets b1;
 //buleets b0;
+bullet b0;
 
 vijand v0;
 vijand v1;
@@ -65,7 +68,8 @@ void setup() {
   //b0 = new buleets();
   v0 = new vijand();
   v1 = new vijand();
-  //b1 = new buleets();
+  b0 = new bullet();
+  c0 = new core();
   //frameRate(60);
   v0.x = 50;
   v1.x = 200;
@@ -80,15 +84,32 @@ void draw() {
   //p.p();
   //p.r();
   //p.d();
-  //b0.buleets();
+  b0.display();
+  b0.update();
 
   v0.display();
   v0.movement();
 
   v1.display();
   v1.movement();
+  c0.display();
 
 
+for(bullet b0 : display){
+b0.display();
+}
+
+if(display.size() > 10){
+display.remove(0);
+}   
+
+if(b0.dead()){
+ display.remove(0);
+ b0.life = 255;
+}
+fill(50,50,50);
+int total = display.size();
+text("The total number of buleets is: " + total,20,29);
 
   //if (qpressed) background(255, 0, 0);
   //  if (rp) background(0, 0, 232);

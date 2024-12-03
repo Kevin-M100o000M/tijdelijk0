@@ -1,8 +1,9 @@
- class player { //<>// //<>// //<>//
+ class player { 
   public int x  = 99;
   int y = 300;
   int spelerSize = 30;
   int move;
+  int bult = 1;
 
   void player() {
     fill(134, 99, 179);
@@ -38,14 +39,13 @@
 
   void playershoot() {
 
-    if (key == 'w') {
-   {
-        //b1.buleets();
-         //funct.add(new test());
-     test part = funct.get(0);
-     part.funct();
-      }
-    }
+    if(key == 'w'){
+for(int i = 0; i <bult; i++){
+  //fill(127,44,200);
+     display.add(new bullet());
+     //display.get(0);
+}
+  }
   }
 
   void playercollison() {

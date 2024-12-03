@@ -13,6 +13,7 @@ size(1300,800);
 
 void draw(){
 background(255);
+   //fill(127,44,200);  
 p.update();
 int total = funct.size();
 text("The total number of buleets is: " + total,20,29);
@@ -27,17 +28,14 @@ rect(300,400,360,300);
 for(test p : funct){
 p.funct();
 }
+
 if(funct.size() > 10){
-//funct.remove(0);
-//funct.remove(1);
-//funct.remove(2  );
 funct.remove(0);
 }   
 
 if(p.dead()){
  funct.remove(0);
  p.life = 255;
- 
 }
 
 

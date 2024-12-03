@@ -5,20 +5,17 @@ class test{
 
   
   void funct(){
-   stroke(0,life);
+   stroke(0);
    strokeWeight(2);
-   fill(127,life);  
    rect(x,y,50,50);
    y = y + 3;  
-   
-   
-
    }
    
 
   void update(){
          life -= 1.5;
   }
+  
       boolean dead(){
         if(life <= 0){
     return true;
