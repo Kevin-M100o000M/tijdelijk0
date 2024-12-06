@@ -1,4 +1,5 @@
-ArrayList<bullet> display  = new ArrayList<bullet>();
+ArrayList<bullet> bullet  = new ArrayList<bullet>();
+ArrayList<vijand> vijand  = new ArrayList<vijand>();
 int[] numbers = new int[3];
 {
   numbers[0]= 90;
@@ -41,7 +42,7 @@ int vijandY2 = 0;
 
 int vijandhoogte2 = 600;
 int vijandbreedte2 = 40;
-//vijand array
+//vijand array            
 //class vijand;
 //vijand[] vijanden = new Vijand[2];
 //{
@@ -71,8 +72,9 @@ void setup() {
   b0 = new bullet();
   c0 = new core();
   //frameRate(60);
-  v0.x = 50;
-  v1.x = 200;
+  //v0.x = 50;
+  v1.x = 500;
+  v0.x = 200;
 }
 float n = mouseX;
 void draw() {
@@ -80,7 +82,7 @@ void draw() {
 
   p.player();
   p.playercollison();
-  p.playershoot();
+
   //p.p();
   //p.r();
   //p.d();
@@ -92,36 +94,42 @@ void draw() {
 
   v1.display();
   v1.movement();
+  v1.somting();
   c0.display();
 
+for(vijand v1 : vijand){
+v1.display();
+}
 
-for(bullet b0 : display){
+for(bullet b0 : bullet){
 b0.display();
 }
 
-if(display.size() > 10){
-display.remove(0);
+if(bullet.size() > 32){
+bullet.remove(0);
 }   
 
-if(b0.dead()){
- display.remove(0);
+if(b0.dead() && bullet.size() > 0){
+ bullet.remove(0);
  b0.life = 255;
 }
 fill(50,50,50);
-int total = display.size();
-text("The total number of buleets is: " + total,20,29);
+int totalb = bullet.size();
+int totalv = vijand.size();
+text("The total number of buleets is: " + totalb,20,29);
+text("The total number of vijand is: " + totalv,20,49);
 
   //if (qpressed) background(255, 0, 0);
   //  if (rp) background(0, 0, 232);
   // if (qpressed && rp) background(255, 4,222);
 
-  rect(Ranx, Rany, 99, 99);
+  //rect(Ranx, Rany, 99, 99);
   //fill(22,0,174);
   fill(104, 139, 139);
-  rect(xa, ya, 99, 99);
-  rect(vijandX0, vijandY0, vijandbreedte0, vijandhoogte0);
-  rect(vijandX1, vijandY0, vijandbreedte1, vijandhoogte1);
-  rect(vijandX2, vijandY2, vijandbreedte2, vijandhoogte2);
+  //rect(xa, ya, 99, 99);
+  //rect(vijandX0, vijandY0, vijandbreedte0, vijandhoogte0);
+  //rect(vijandX1, vijandY0, vijandbreedte1, vijandhoogte1);
+  //rect(vijandX2, vijandY2, vijandbreedte2, vijandhoogte2);
   //rect(400,300,44,99);
   line(vijandX0, vijandY0, 200, 250);
   //line(400,200,800,200);
@@ -155,6 +163,7 @@ text("The total number of buleets is: " + total,20,29);
 
 
 void keyPressed() {
+    p.playershoot();
   if (key == 'q' && qpressed == false) qpressed = true;
   if (key == 'r' && rp == false) rp = true;
   p.playermove();

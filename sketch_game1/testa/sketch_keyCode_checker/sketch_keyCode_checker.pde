@@ -17,8 +17,6 @@ void setup() {
 String e = "2";
 void draw() {
   int total = press.size();
-  String line = "";
-
   background(0);
   fill(255);
   text("The total number of press is: " + total, 20, 29);
@@ -50,11 +48,13 @@ void keyPressed() {
   press.size() > 833 && press.size() < 835) {
     press.add(keyCode +"|\n|");
   } else
-    press.add(keyCode +"");
+    press.add(keyCode + "");
   if (keyCode == 81 || keyCode == 27) {
     println(press);
     exit();
+    
   }
+  //println(press);
 }
 //|| press.size() > 862 && press.size() < 864
 //79

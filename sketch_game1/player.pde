@@ -38,11 +38,9 @@
   }
 
   void playershoot() {
-
     if(key == 'w'){
 for(int i = 0; i <bult; i++){
-  //fill(127,44,200);
-     display.add(new bullet());
+     bullet.add(new bullet());
      //display.get(0);
 }
   }
