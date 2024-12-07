@@ -6,7 +6,7 @@ int[] numbers = new int[3];
   numbers[1]= 150;
   numbers[2]= 20;
 }
-
+ 
 //array logic
 int a = numbers[2] + numbers[0];
 int b = numbers[0] + numbers[1];
@@ -75,6 +75,8 @@ void setup() {
   //v0.x = 50;
   v1.x = 500;
   v0.x = 200;
+  v0.y = 600;
+
 }
 float n = mouseX;
 void draw() {
@@ -87,6 +89,7 @@ void draw() {
   //p.r();
   //p.d();
   b0.display();
+  b0.bulletscolission();
   b0.update();
 
   v0.display();
@@ -96,6 +99,8 @@ void draw() {
   v1.movement();
   v1.somting();
   c0.display();
+  
+    v0.y -=3;
 
 for(vijand v1 : vijand){
 v1.display();
