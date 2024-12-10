@@ -1,5 +1,5 @@
 class vijand{
- public float  x = random(70,1130);
+ public float  x = random(70,700);
  public int  y;
  int move;
  int bult = 1;
@@ -32,11 +32,10 @@ class vijand{
  
   void somting() {
     if(key == 'e'){
-for(int i = 0; i <bult; i++){
      vijand.add(new vijand());
      //display.get(0);
 }
-    }
+    
   }
    //boolean dead(){
    //     if(l >= 75){

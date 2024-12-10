@@ -106,18 +106,9 @@ for(vijand v1 : vijand){
 v1.display();
 }
 
-for(bullet b0 : bullet){
-b0.display();
-}
-
-if(bullet.size() > 32){
-bullet.remove(0);
-}   
-
-if(b0.dead() && bullet.size() > 0){
- bullet.remove(0);
- b0.life = 255;
-}
+//println(b0.x);
+//println(b0.y);
+//println(p.x);
 fill(50,50,50);
 int totalb = bullet.size();
 int totalv = vijand.size();
