@@ -22,10 +22,10 @@ if(bullet.size() > 32){
 bullet.remove(0);
 }   
 
-if(b0.dead() && bullet.size() > 0){
- bullet.remove(0);
- b0.life = 255;
-}
+//if(b0.dead() && bullet.size() > 0){
+// bullet.remove(0);
+// b0.life = 255;
+//}
   
   }
   
@@ -35,12 +35,12 @@ if(b0.dead() && bullet.size() > 0){
      vijand.remove(0);
      p.x = 99;
     }
-      if (x + bulsize > v0.x && x < v0.x + v0.w && y + bulsize > v0.y && y < v0.y + v0.h || x + bulsize > vijandX1 && x < vijandX1 + vijandbreedte1 && y + bulsize > vijandY0 && y < vijandY0 + vijandhoogte1) {
-              if(life <= 0){
-    return true;
-   }else{
-   return false;
-   }
+   //   if (x + bulsize > v0.x && x < v0.x + v0.w && y + bulsize > v0.y && y < v0.y + v0.h || x + bulsize > vijandX1 && x < vijandX1 + vijandbreedte1 && y + bulsize > vijandY0 && y < vijandY0 + vijandhoogte1) {
+   //           if(life <= 0){
+   // return true;
+   //}else{
+   //return false;
+   //}
   
 }
 }
